@@ -15,9 +15,9 @@ before_install:
 script:
 - 'export PATH=/home/travis/build/u125300/test/ndk-binaries/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin:$PATH'
 - 'export PATH=/home/travis/build/u125300/test/ndk-binaries/toolchains/arm-linux-androideabi-4.9:$PATH'
-- 'export C_INCLUDE_PATH=$C_INCLUDE_PATH:/home/travis/build/u125300/test/ndk-binaries/platforms/android-16/arch-arm/usr/'
-- 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/travis/build/u125300/test/ndk-binaries/platforms/android-16/arch-arm/usr/'
-- 'export LIBRARY_PATH=$LIBRARY_PATH:/home/travis/build/u125300/test/ndk-binaries/platforms/android-16/arch-arm/usr/'
+- 'export C_INCLUDE_PATH=/home/travis/build/u125300/test/ndk-binaries/platforms/android-16/arch-arm/usr:$C_INCLUDE_PATH'
+- 'export LD_LIBRARY_PATH=/home/travis/build/u125300/test/ndk-binaries/platforms/android-16/arch-arm/usr:$LD_LIBRARY_PATH'
+- 'export LIBRARY_PATH=/home/travis/build/u125300/test/ndk-binaries/platforms/android-16/arch-arm/usr:$LIBRARY_PATH'
 - 'export CC=arm-linux-android_eabi-gcc'
 - 'export LD=arm-linux-android_eabi-ld'
 - 'export AR=arm-linux-android_eabi-ar'

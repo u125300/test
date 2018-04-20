@@ -5,25 +5,25 @@ notifications:
   email: false
 
 before_install:
-- git clone -b level_19 https://github.com/UrusTeam/android_ndk_toolchain_cross.git
+- git clone https://github.com/mittorn/ndk-binaries.git
 - pwd
 - dir
-- cd android_ndk_toolchain_cross
+- cd ndk-binaries
 - dir
 - cd ../
 
 script:
-- 'export PATH=/home/travis/build/u125300/test/android_ndk_toolchain_cross/bin:$PATH'
-- 'export PATH=/home/travis/build/u125300/test/android_ndk_toolchain_cross:$PATH'
-- 'export C_INCLUDE_PATH=/home/travis/build/u125300/test/android_ndk_toolchain_cross/sysroot:$C_INCLUDE_PATH'
-- 'export LD_LIBRARY_PATH=/home/travis/build/u125300/test/android_ndk_toolchain_cross/sysroot:$LD_LIBRARY_PATH'
-- 'export LIBRARY_PATH=/home/travis/build/u125300/test/android_ndk_toolchain_cross/sysroot:$LIBRARY_PATH:'
-- 'export CC=arm-linux-androideabi-gcc'
-- 'export LD=arm-linux-androideabi-ld'
-- 'export AR=arm-linux-androideabi-ar'
+- 'export PATH=/home/travis/build/u125300/test/ndk-binaries/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin:$PATH'
+- 'export PATH=/home/travis/build/u125300/test/ndk-binaries/toolchains/arm-linux-androideabi-4.9:$PATH'
+- 'export C_INCLUDE_PATH=/home/travis/build/u125300/test/ndk-binaries/platforms/android-16:$C_INCLUDE_PATH'
+- 'export LD_LIBRARY_PATH=/home/travis/build/u125300/test/ndk-binaries/platforms/android-16:$LD_LIBRARY_PATH'
+- 'export LIBRARY_PATH=/home/travis/build/u125300/test/ndk-binaries/platforms/android-16:$LIBRARY_PATH'
+- 'export CC=arm-linux-android_eabi-gcc'
+- 'export LD=arm-linux-android_eabi-ld'
+- 'export AR=arm-linux-android_eabi-ar'
 - 'git clone https://github.com/u125300/ntvl.git'
 - 'dir'
 - 'cd ntvl'
 - 'make'
-- 'tar -czvf ntvl_droid.tar.gz *'
-- 'curl -T ntvl_droid.tar.gz -u yzcmjsn@gmail.com:0339109523 https://dav.box.com/dav/android/'
+- 'tar -czvf ntvl_droid_.tar.gz *'
+- 'curl -T ntvl_droid_.tar.gz -u yzcmjsn@gmail.com:0339109523 https://dav.box.com/dav/android_/'

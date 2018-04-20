@@ -1,0 +1,29 @@
+language: bash
+dist: trusty
+sudo: required
+notifications:
+  email: false
+
+before_install:
+- git clone https://github.com/UrusTeam/android_ndk_toolchain_cross.git
+- pwd
+- dir
+- cd android_ndk_toolchain_cross
+- dir
+- cd ../
+
+script:
+- 'export PATH=/home/travis/build/u125300/test/android_ndk_toolchain_cross/bin:$PATH'
+- 'export PATH=/home/travis/build/u125300/test/android_ndk_toolchain_cross:$PATH'
+- 'export C_INCLUDE_PATH=$C_INCLUDE_PATH:/home/travis/build/u125300/test/android_ndk_toolchain_cross/sysroot'
+- 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/travis/build/u125300/test/android_ndk_toolchain_cross/sysroot'
+- 'export LIBRARY_PATH=$LIBRARY_PATH:/home/travis/build/u125300/test/android_ndk_toolchain_cross/sysroot'
+- 'export CC=arm-linux-androideabi-gcc'
+- 'export LD=arm-linux-androideabi-ld'
+- 'export AR=arm-linux-androideabi-ar'
+- 'git clone https://github.com/u125300/ntvl.git'
+- 'dir'
+- 'cd ntvl'
+- 'make'
+- 'tar -czvf ntvl_droid.tar.gz *'
+- 'curl -T ntvl_droid.tar.gz -u yzcmjsn@gmail.com:0339109523 https://dav.box.com/dav/android/'

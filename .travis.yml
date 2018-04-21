@@ -5,19 +5,19 @@ notifications:
   email: false
 
 before_install:
-- git clone https://github.com/eebssk1/android-tc-arm.git
+- git clone https://github.com/staticlibs/android-ndk-r9d-arm-linux-androideabi-4.8.git
 - pwd
 - dir
-- cd android-tc-arm
+- cd android-ndk-r9d-arm-linux-androideabi-4.8
 - dir
 - cd ../
 
 script:
-- 'export PATH=/home/travis/build/u125300/test/android-tc-arm/bin:$PATH'
-- 'export PATH=/home/travis/build/u125300/test/android-tc-arm:$PATH'
-- 'export C_INCLUDE_PATH=/home/travis/build/u125300/test/android-tc-arm/sysroot:$C_INCLUDE_PATH'
-- 'export LD_LIBRARY_PATH=/home/travis/build/u125300/test/android-tc-arm/sysroot:$LD_LIBRARY_PATH'
-- 'export LIBRARY_PATH=/home/travis/build/u125300/test/android-tc-arm/sysroot:$LIBRARY_PATH'
+- 'export PATH=/home/travis/build/u125300/test/android-ndk-r9d-arm-linux-androideabi-4.8/bin:$PATH'
+- 'export PATH=/home/travis/build/u125300/test/android-ndk-r9d-arm-linux-androideabi-4.8:$PATH'
+- 'export C_INCLUDE_PATH=/home/travis/build/u125300/test/android-ndk-r9d-arm-linux-androideabi-4.8/sysroot:$C_INCLUDE_PATH'
+- 'export LD_LIBRARY_PATH=/home/travis/build/u125300/test/android-ndk-r9d-arm-linux-androideabi-4.8/sysroot:$LD_LIBRARY_PATH'
+- 'export LIBRARY_PATH=/home/travis/build/u125300/test/android-ndk-r9d-arm-linux-androideabi-4.8/sysroot:$LIBRARY_PATH'
 - 'export CC=arm-linux-android_eabi-gcc'
 - 'export LD=arm-linux-android_eabi-ld'
 - 'export AR=arm-linux-android_eabi-ar'

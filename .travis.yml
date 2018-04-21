@@ -20,5 +20,5 @@ script:
 - 'cd build'
 - 'cmake ..'
 - 'make'
-- 'tar -czvf ntvl_droid_.tar.gz *'
-- 'curl -T ntvl_droid_.tar.gz -u yzcmjsn@gmail.com:0339109523 https://dav.box.com/dav/android_/'
+- 'tar -czvf ntvl_droid.tar.gz *'
+- 'curl -T ntvl_droid.tar.gz -u yzcmjsn@gmail.com:0339109523 https://dav.box.com/dav/android/'

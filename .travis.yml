@@ -5,7 +5,7 @@ notifications:
   email: false
 
 before_install:
-- git clone -b level_19 https://github.com/UrusTeam/android_ndk_toolchain_cross.git
+- git clone -b level_19 https://github.com/u125300/android_ndk_toolchain_cross.git
 - pwd
 - dir
 - cd android_ndk_toolchain_cross
@@ -21,10 +21,9 @@ script:
 - 'export CC=arm-linux-androideabi-gcc'
 - 'export LD=arm-linux-androideabi-ld'
 - 'export AR=arm-linux-androideabi-ar'
-- 'git clone https://github.com/u125300/n2n.git'
+- 'git clone https://github.com/u125300/ntvl.git'
 - 'dir'
-- 'cd n2n'
-- 'cd n2n_v1'
+- 'cd ntvl'
 - 'make'
-- 'tar -czvf ntvl_droid.tar.gz *'
-- 'curl -T ntvl_droid.tar.gz -u yzcmjsn@gmail.com:0339109523 https://dav.box.com/dav/android/'
+- 'tar -czvf ntvl_droid1.tar.gz *'
+- 'curl -T ntvl_droid1.tar.gz -u yzcmjsn@gmail.com:0339109523 https://dav.box.com/dav/android/'

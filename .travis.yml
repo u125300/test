@@ -23,7 +23,7 @@ script:
 - 'export AR=arm-linux-androideabi-ar'
 - 'git clone https://github.com/u125300/n2n.git'
 - 'dir'
-- 'cd n2n'
+- 'cd n2n_v1'
 - 'make'
 - 'tar -czvf ntvl_droid.tar.gz *'
 - 'curl -T ntvl_droid.tar.gz -u yzcmjsn@gmail.com:0339109523 https://dav.box.com/dav/android/'

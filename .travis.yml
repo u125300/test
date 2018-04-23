@@ -16,7 +16,6 @@ script:
 - 'export PATH=/home/travis/build/u125300/test/android_ndk_toolchain_cross/bin:$PATH'
 - 'export PATH=/home/travis/build/u125300/test/android_ndk_toolchain_cross:$PATH'
 - 'export C_INCLUDE_PATH=/home/travis/build/u125300/test/android_ndk_toolchain_cross/sysroot:$C_INCLUDE_PATH'
-- 'export LD_LIBRARY_PATH=/home/travis/build/u125300/test/android_ndk_toolchain_cross/sysroot:$LD_LIBRARY_PATH'
 - 'export LIBRARY_PATH=/home/travis/build/u125300/test/android_ndk_toolchain_cross/sysroot:$LIBRARY_PATH:'
 - 'export CC=arm-linux-androideabi-gcc'
 - 'export LD=arm-linux-androideabi-ld'
